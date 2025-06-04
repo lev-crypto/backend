@@ -26,9 +26,9 @@ const createOrder = async (req, res) => {
         payment_method: "paypal",
       },
       redirect_urls: {
-        return_url: "https://g-shif-frontend.vercel.app/shop/paypal-return",
-        cancel_url: "https://g-shif-frontend.vercel.app/shop/paypal-cancel",
-        
+        return_url: `${process.env.CLIENT_URL}/shop/paypal-return`,
+        cancel_url: `${process.env.CLIENT_URL}/shop/paypal-cancel`
+
       },
       transactions: [
         {
